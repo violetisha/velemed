@@ -29,3 +29,8 @@ graphics/
 #################
 *.html
 *.css
+
+#################
+## Entregables
+#################
+velemed_quantum/
