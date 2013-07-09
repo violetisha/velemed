@@ -39,7 +39,7 @@ $img: "../img/"
 body 
 	color: white
 	background: $primario
-	font-family: 'droidsans', Arial, sans
+	font-family: 'DroidSansRegular', Arial, sans
 
 p
 	line-height: 1.3em
@@ -71,8 +71,18 @@ a
 	text-decoration: none
 	color: white
 #interna
+	margin-bottom: 200px
 	a:hover
 		color: darken($primario, 20)
+.link-contacto
+	background: url("#{$img}contacto.png") no-repeat
+	display: block
+	height: 81px
+	line-height: 81px
+	width: 236px
+	text-align: center
+	font-size: 1.3em
+	font-family: "nunitobold"
 
 // header
 header 
@@ -82,6 +92,7 @@ header
 	background: $primario
 	z-index: 1900
 	top: 0px
+	@include single-box-shadow(#000, 0px, 0px, 15px)
 	
 
 	#logo
@@ -151,7 +162,7 @@ nav
 	@include clearfix
 	background: url("#{$img}bg-seccion.png") no-repeat
 	background-size: cover
-	padding-top: 130px
+	padding-top: 180px
 	position: relative
 	margin-top: -200px
 	z-index: 1800
@@ -166,7 +177,7 @@ nav
 	margin-top: -160px
 #home-04 
 	background: url("#{$img}bg-03.png") no-repeat
-	z-index: 1820
+	z-index: 1830
 	margin-top: -160px
 
 #home-02, #home-03, #home-04 
@@ -179,7 +190,7 @@ nav
 		padding-bottom: 120px
 		@include clearfix
 		p
-			font-family: "droidsansbold"
+			font-weight: bold
 
 		div
 			@include span-columns(6)
@@ -285,7 +296,7 @@ nav
 	text-align: center
 	line-height: 70px
 	font-size: .9em
-	z-index: 1870
+	z-index: 2000
 
 //footer
 footer
@@ -294,6 +305,9 @@ footer
 	height: 200px
 	padding-top: 140px
 	text-align: right
+	z-index: 1990
+	position: relative
+	margin-top: -200px
 
 	p
 		padding-bottom: .3em 

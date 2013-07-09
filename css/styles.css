@@ -1677,17 +1677,9 @@ ul.icons li [class*=" icon-"] {
 }
 
 @font-face {
-  font-family: "droidsansbold";
-  src: url("../font/DroidSans-Bold-webfont.eot");
-  src: url("../font/DroidSans-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../font/DroidSans-Bold-webfont.woff") format("woff"), url("../font/DroidSans-Bold-webfont.ttf") format("truetype"), url("../font/DroidSans-Bold-webfont.svg#droidsansbold") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "droidsans";
+  font-family: "DroidSansRegular";
   src: url("../font/DroidSans-webfont.eot");
-  src: url("../font/DroidSans-webfont.eot?#iefix") format("embedded-opentype"), url("../font/DroidSans-webfont.woff") format("woff"), url("../font/DroidSans-webfont.ttf") format("truetype"), url("../font/DroidSans-webfont.svg#droidsans") format("svg");
+  src: url("../font/DroidSans-webfont.eot?#iefix") format("embedded-opentype"), url("../font/DroidSans-webfont.woff") format("woff"), url("../font/DroidSans-webfont.ttf") format("truetype"), url("../font/DroidSans-webfont.svg#DroidSansRegular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -1722,7 +1714,7 @@ ul.icons li [class*=" icon-"] {
 body {
   color: white;
   background: #008081;
-  font-family: "droidsans", Arial, sans;
+  font-family: "DroidSansRegular", Arial, sans;
 }
 
 /* line 44, ../sass/styles.sass */
@@ -1773,12 +1765,28 @@ a {
   color: white;
 }
 
-/* line 74, ../sass/styles.sass */
+/* line 73, ../sass/styles.sass */
+#interna {
+  margin-bottom: 200px;
+}
+/* line 75, ../sass/styles.sass */
 #interna a:hover {
   color: #001b1b;
 }
 
-/* line 78, ../sass/styles.sass */
+/* line 77, ../sass/styles.sass */
+.link-contacto {
+  background: url("../img/contacto.png") no-repeat;
+  display: block;
+  height: 81px;
+  line-height: 81px;
+  width: 236px;
+  text-align: center;
+  font-size: 1.3em;
+  font-family: "nunitobold";
+}
+
+/* line 88, ../sass/styles.sass */
 header {
   height: 80px;
   position: fixed;
@@ -1786,33 +1794,36 @@ header {
   background: #008081;
   z-index: 1900;
   top: 0px;
+  -webkit-box-shadow: 0px 0px 15px black;
+  -moz-box-shadow: 0px 0px 15px black;
+  box-shadow: 0px 0px 15px black;
 }
-/* line 87, ../sass/styles.sass */
+/* line 98, ../sass/styles.sass */
 header #logo {
   float: left;
 }
 
-/* line 91, ../sass/styles.sass */
+/* line 102, ../sass/styles.sass */
 nav {
   height: 80px;
   width: 960px;
   position: absolute;
   font-family: "nunitolight";
 }
-/* line 96, ../sass/styles.sass */
+/* line 107, ../sass/styles.sass */
 nav > ul {
   margin: 0;
   padding: 0;
   position: absolute;
   right: 0px;
 }
-/* line 101, ../sass/styles.sass */
+/* line 112, ../sass/styles.sass */
 nav > ul > li {
   position: relative;
   text-align: center;
   float: left;
 }
-/* line 105, ../sass/styles.sass */
+/* line 116, ../sass/styles.sass */
 nav > ul > li > a {
   height: 80px;
   display: table-cell;
@@ -1821,36 +1832,36 @@ nav > ul > li > a {
   text-transform: uppercase;
   font-family: "nunitobold";
 }
-/* line 112, ../sass/styles.sass */
+/* line 123, ../sass/styles.sass */
 nav > ul > li ul {
   display: none;
   position: absolute;
   background: #00a2a0;
   width: 150px;
 }
-/* line 118, ../sass/styles.sass */
+/* line 129, ../sass/styles.sass */
 nav > ul > li ul li {
   list-style: none;
 }
-/* line 120, ../sass/styles.sass */
+/* line 131, ../sass/styles.sass */
 nav > ul > li ul li a {
   display: block;
   padding: 10px 0;
 }
-/* line 123, ../sass/styles.sass */
+/* line 134, ../sass/styles.sass */
 nav > ul > li ul li a:hover {
   background: #00bfb8;
 }
-/* line 126, ../sass/styles.sass */
+/* line 137, ../sass/styles.sass */
 nav > ul > li:hover {
   background: #00a2a0;
 }
-/* line 128, ../sass/styles.sass */
+/* line 139, ../sass/styles.sass */
 nav > ul > li:hover ul {
   display: block;
 }
 
-/* line 132, ../sass/styles.sass */
+/* line 143, ../sass/styles.sass */
 #slider {
   height: 545px;
   overflow: hidden;
@@ -1858,13 +1869,13 @@ nav > ul > li:hover ul {
   margin-top: 80px;
   position: relative;
 }
-/* line 139, ../sass/styles.sass */
+/* line 150, ../sass/styles.sass */
 #slider img {
   width: 100%;
   min-height: 550px;
 }
 
-/* line 143, ../sass/styles.sass */
+/* line 154, ../sass/styles.sass */
 .nivo-controlNav {
   width: 960px;
   margin: 0 auto;
@@ -1872,12 +1883,12 @@ nav > ul > li:hover ul {
   z-index: 3000;
 }
 
-/* line 150, ../sass/styles.sass */
+/* line 161, ../sass/styles.sass */
 #interna, #home-01 {
   *zoom: 1;
   background: url("../img/bg-seccion.png") no-repeat;
   background-size: cover;
-  padding-top: 130px;
+  padding-top: 180px;
   position: relative;
   margin-top: -200px;
   z-index: 1800;
@@ -1892,27 +1903,27 @@ nav > ul > li:hover ul {
   clear: both;
 }
 
-/* line 160, ../sass/styles.sass */
+/* line 171, ../sass/styles.sass */
 #home-02 {
   background: url("../img/bg-01.png") no-repeat;
   z-index: 1810;
 }
 
-/* line 163, ../sass/styles.sass */
+/* line 174, ../sass/styles.sass */
 #home-03 {
   background: url("../img/bg-02.png") no-repeat;
   z-index: 1820;
   margin-top: -160px;
 }
 
-/* line 167, ../sass/styles.sass */
+/* line 178, ../sass/styles.sass */
 #home-04 {
   background: url("../img/bg-03.png") no-repeat;
-  z-index: 1820;
+  z-index: 1830;
   margin-top: -160px;
 }
 
-/* line 172, ../sass/styles.sass */
+/* line 183, ../sass/styles.sass */
 #home-02, #home-03, #home-04 {
   background-size: cover;
   padding-top: 130px;
@@ -1928,7 +1939,7 @@ nav > ul > li:hover ul {
 #home-02:after, #home-03:after, #home-04:after {
   clear: both;
 }
-/* line 178, ../sass/styles.sass */
+/* line 189, ../sass/styles.sass */
 #home-02 article, #home-03 article, #home-04 article {
   padding-bottom: 120px;
   *zoom: 1;
@@ -1942,11 +1953,11 @@ nav > ul > li:hover ul {
 #home-02 article:after, #home-03 article:after, #home-04 article:after {
   clear: both;
 }
-/* line 181, ../sass/styles.sass */
+/* line 192, ../sass/styles.sass */
 #home-02 article p, #home-03 article p, #home-04 article p {
-  font-family: "droidsansbold";
+  font-weight: bold;
 }
-/* line 184, ../sass/styles.sass */
+/* line 195, ../sass/styles.sass */
 #home-02 article div, #home-03 article div, #home-04 article div {
   display: block;
   float: left;
@@ -1957,31 +1968,31 @@ nav > ul > li:hover ul {
 #home-02 article div:last-child, #home-03 article div:last-child, #home-04 article div:last-child {
   margin-right: 0;
 }
-/* line 186, ../sass/styles.sass */
+/* line 197, ../sass/styles.sass */
 #home-02 article div h2, #home-03 article div h2, #home-04 article div h2 {
   margin-top: 40px;
   text-align: left;
   font-size: 50px;
 }
-/* line 190, ../sass/styles.sass */
+/* line 201, ../sass/styles.sass */
 #home-02 article div.last, #home-03 article div.last, #home-04 article div.last {
   margin-right: 0;
 }
 
-/* line 195, ../sass/styles.sass */
+/* line 206, ../sass/styles.sass */
 #tabs h2 {
   float: left;
   margin: 0 0 1em 0;
 }
-/* line 199, ../sass/styles.sass */
+/* line 210, ../sass/styles.sass */
 #tabs ul {
   text-align: right;
 }
-/* line 201, ../sass/styles.sass */
+/* line 212, ../sass/styles.sass */
 #tabs ul li {
   display: inline-block;
 }
-/* line 203, ../sass/styles.sass */
+/* line 214, ../sass/styles.sass */
 #tabs ul li a {
   background: #01bfb9;
   font-size: 14px;
@@ -1990,11 +2001,11 @@ nav > ul > li:hover ul {
   outline: none;
   padding: 10px 15px;
 }
-/* line 210, ../sass/styles.sass */
+/* line 221, ../sass/styles.sass */
 #tabs ul li a.active {
   background: #2ad27a;
 }
-/* line 213, ../sass/styles.sass */
+/* line 224, ../sass/styles.sass */
 #tabs ul li:first-of-type a {
   -moz-border-radius-topleft: 20px;
   -webkit-border-top-left-radius: 20px;
@@ -2003,7 +2014,7 @@ nav > ul > li:hover ul {
   -webkit-border-bottom-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
-/* line 216, ../sass/styles.sass */
+/* line 227, ../sass/styles.sass */
 #tabs ul li:last-of-type a {
   -moz-border-radius-topright: 20px;
   -webkit-border-top-right-radius: 20px;
@@ -2013,7 +2024,7 @@ nav > ul > li:hover ul {
   border-bottom-right-radius: 20px;
 }
 
-/* line 221, ../sass/styles.sass */
+/* line 232, ../sass/styles.sass */
 .form {
   display: block;
   float: left;
@@ -2027,19 +2038,19 @@ nav > ul > li:hover ul {
 .form:last-child {
   margin-right: 0;
 }
-/* line 226, ../sass/styles.sass */
+/* line 237, ../sass/styles.sass */
 .form label {
   display: block;
   margin: 10px 0;
 }
-/* line 229, ../sass/styles.sass */
+/* line 240, ../sass/styles.sass */
 .form label span {
   width: 80px;
   display: block;
   float: left;
   line-height: 26px;
 }
-/* line 234, ../sass/styles.sass */
+/* line 245, ../sass/styles.sass */
 .form label textarea, .form label input {
   width: 530px;
   padding: 5px 10px;
@@ -2052,11 +2063,11 @@ nav > ul > li:hover ul {
   -webkit-border-bottom-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
-/* line 241, ../sass/styles.sass */
+/* line 252, ../sass/styles.sass */
 .form label textarea {
   height: 200px;
 }
-/* line 243, ../sass/styles.sass */
+/* line 254, ../sass/styles.sass */
 .form > button {
   font-size: 19px;
   padding: 0.5em 1.5em;
@@ -2122,7 +2133,7 @@ nav > ul > li:hover ul {
   box-shadow: #004d4e 0 0.2em 0px;
 }
 
-/* line 248, ../sass/styles.sass */
+/* line 259, ../sass/styles.sass */
 .address {
   display: block;
   float: left;
@@ -2135,7 +2146,7 @@ nav > ul > li:hover ul {
   margin-right: 0;
 }
 
-/* line 253, ../sass/styles.sass */
+/* line 264, ../sass/styles.sass */
 #social {
   background: url("../img/bg-socialmedia.png");
   width: 52px;
@@ -2157,7 +2168,7 @@ nav > ul > li:hover ul {
 #social:after {
   clear: both;
 }
-/* line 265, ../sass/styles.sass */
+/* line 276, ../sass/styles.sass */
 #social a {
   display: block;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
@@ -2166,12 +2177,12 @@ nav > ul > li:hover ul {
   height: 21px;
   margin-bottom: 5px;
 }
-/* line 273, ../sass/styles.sass */
+/* line 284, ../sass/styles.sass */
 #social a:hover {
   color: #008081;
 }
 
-/* line 277, ../sass/styles.sass */
+/* line 288, ../sass/styles.sass */
 #top {
   position: fixed;
   bottom: 30px;
@@ -2183,18 +2194,21 @@ nav > ul > li:hover ul {
   text-align: center;
   line-height: 70px;
   font-size: 0.9em;
-  z-index: 1870;
+  z-index: 2000;
 }
 
-/* line 291, ../sass/styles.sass */
+/* line 302, ../sass/styles.sass */
 footer {
   background: url("../img/bg-footer.png") no-repeat top center;
   background-size: cover;
   height: 200px;
   padding-top: 140px;
   text-align: right;
+  z-index: 1990;
+  position: relative;
+  margin-top: -200px;
 }
-/* line 298, ../sass/styles.sass */
+/* line 312, ../sass/styles.sass */
 footer p {
   padding-bottom: 0.3em;
 }
