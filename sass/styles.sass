@@ -45,6 +45,11 @@ p
 	line-height: 1.3em
 	padding-bottom: 1.5em
 
+article li
+	list-style: circle
+	line-height: 1.3em
+	margin-left: 20px
+
 // titulos
 h1, h2, h3, h4, h5, h6
 	font-family: 'nunitobold', Arial, sans
@@ -97,6 +102,12 @@ header
 
 	#logo
 		float: left
+		a
+			display: block
+			width: 170px
+			height: 148px
+			position: absolute
+			z-index: 3000
 
 // menu
 nav
@@ -113,6 +124,9 @@ nav
 			position: relative
 			text-align: center
 			float: left
+			background: url("#{$img}bg-menu.png") no-repeat bottom center
+			&.intranet 
+				background: none
 			>a 
 				height: 80px
 				display: table-cell
@@ -134,7 +148,7 @@ nav
 						&:hover
 							background: #00BFB8
 
-			&:hover
+			&:hover, &.active
 				background: $hover-menu
 				ul
 					display: block
@@ -152,10 +166,24 @@ nav
 		min-height: 550px
 
 .nivo-controlNav 
-	width: 960px
-	margin: 0 auto
+	display: none
+
+.slidesjs-next
 	position: relative
-	z-index: 3000
+	z-index: 9001
+	background: url("#{$img}next.png") no-repeat right top
+	display: block
+	width: 92px
+	height: 56px
+	right: 0px	
+
+.slidesjs-previous
+	position: relative
+	z-index: 9002
+	background: url("#{$img}prev.png") no-repeat right top
+	display: block
+	width: 106px
+	height: 56px	
 
 // bloque azul
 #interna, #home-01
@@ -203,11 +231,11 @@ nav
 
 // tabs
 #tabs 
-	h2 
+	>h2 
 		float: left
 		margin: 0 0 1em 0
 
-	ul
+	>ul
 		text-align: right
 		li 
 			display: inline-block
