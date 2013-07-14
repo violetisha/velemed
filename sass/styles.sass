@@ -9,33 +9,22 @@ $img: "../imagenes/"
 
 // imports
 @import "compass/css3"
+
+/* RESET ---- */
 @import "compass/reset"
-@import "compass/typography"
-@import "font-awesome"
-//@import "icons/*.png"
+/* ---- RESET */
+
+/* FIX PARA EL GRID ---- */
 @import "bourbon/bourbon"
 @import "neat/neat"
-@import "sassy-buttons"
-@import "fonts"
+/* ---- FIX PARA EL GRID */
 
-// utils
-.container
-	width: 960px
-	margin: 0 auto
-	position: relative
+/* FONT FACE ---- */
+@import "_fonts"
+@import "_font-social-media"
+/* ---- FONT FACE */
 
-.float-center 
-	display: block
-	margin: 0 auto
-	margin-bottom: $spacer
-.float-left
-	float: left
-	margin-right: $spacer
-.float-right
-	float: right
-	margin-left: $spacer
-
-// body
+/* GENERAL ---- */
 body 
 	color: white
 	background: $primario
@@ -50,7 +39,7 @@ article li
 	line-height: 1.3em
 	margin-left: 20px
 
-// titulos
+/* TITULOS ---- */
 h1, h2, h3, h4, h5, h6
 	font-family: 'nunitobold', Arial, sans
 h1,h2
@@ -71,7 +60,7 @@ h4
 	font-size: 20px
 	margin: .5em 0
 
-// links
+/* LINKS ---- */
 a 
 	text-decoration: none
 	color: white
@@ -89,7 +78,7 @@ a
 	font-size: 1.3em
 	font-family: "nunitobold"
 
-// header
+/* HEADER ---- */
 header 
 	height: 80px
 	position: fixed
@@ -109,7 +98,7 @@ header
 			position: absolute
 			z-index: 3000
 
-// menu
+/* MENU ---- */
 nav
 	height: 80px
 	width: 960px
@@ -153,7 +142,7 @@ nav
 				ul
 					display: block
 
-// slider
+/* SLIDER ---- */
 #slider
 	height: 545px
 	overflow: hidden
@@ -185,7 +174,7 @@ nav
 	width: 106px
 	height: 56px	
 
-// bloque azul
+/* BLOQUE DE CONTENIDO AZUL ---- */
 #interna, #home-01
 	@include clearfix
 	background: url("#{$img}bg-seccion.png") no-repeat
@@ -195,7 +184,7 @@ nav
 	margin-top: -200px
 	z-index: 1800
 
-// home
+/* HOME ---- */
 #home-02 
 	background: url("#{$img}bg-01.png") no-repeat
 	z-index: 1810
@@ -229,7 +218,7 @@ nav
 			&.last
 				@include omega()
 
-// tabs
+/* TABS ---- */
 #tabs 
 	>h2 
 		float: left
@@ -256,7 +245,7 @@ nav
 			@include border-top-right-radius(20px)
 			@include border-bottom-right-radius(20px)
 
-// contacto
+/* FORMULARIO DE CONTACTO ---- */
 .form
 	@include span-columns(8)
 	margin-top: $spacer
@@ -280,15 +269,13 @@ nav
 		textarea
 			height: 200px
 	>button
-		@include sassy-button("shiny", 10px, 19px, $terciario)
-		@include sassy-button-style("push", darken($primario, 2))
 		float: right
 
 .address
 	@include span-columns(3)
 	margin-top: $spacer
 
-// socialmedia
+/* PANEL DE SOCIAL MEDIA ---- */
 #social
 	background: url("#{$img}bg-socialmedia.png")
 	width: 52px
@@ -304,7 +291,7 @@ nav
 	a
 		display: block
 		text-shadow: 2px 2px 3px rgba(0,0,0,.5)
-		font-size: 1.3em
+		font-size: 1.2em
 		width: 18px
 		height: 21px
 		margin-bottom: 5px
@@ -312,7 +299,7 @@ nav
 		&:hover
 			color: $primario
 
-// boton arriba
+/* BOTON ARRIBA ---- */
 #top 
 	position: fixed
 	bottom: 30px
@@ -326,7 +313,7 @@ nav
 	font-size: .9em
 	z-index: 2000
 
-//footer
+/* FOOTER ---- */
 footer
 	background: url("#{$img}bg-footer.png") no-repeat top center
 	background-size: cover
@@ -338,4 +325,21 @@ footer
 	margin-top: -200px
 
 	p
-		padding-bottom: .3em 
+		padding-bottom: .3em
+
+/* CLASES UTILES ---- */
+.container
+	width: 960px
+	margin: 0 auto
+	position: relative
+
+.float-center 
+	display: block
+	margin: 0 auto
+	margin-bottom: $spacer
+.float-left
+	float: left
+	margin-right: $spacer
+.float-right
+	float: right
+	margin-left: $spacer
