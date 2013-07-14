@@ -55,7 +55,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* ---- RESET */
 /* FIX PARA EL GRID ---- */
 * {
   -webkit-box-sizing: border-box;
@@ -63,7 +62,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   box-sizing: border-box;
 }
 
-/* ---- FIX PARA EL GRID */
 /* FONT FACE ---- */
 @font-face {
   font-family: "nunitobold";
@@ -143,70 +141,58 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   content: "\e004";
 }
 
-/* ---- FONT FACE */
 /* GENERAL ---- */
 body {
   color: white;
   background: #008081;
   font-family: "DroidSansRegular", Arial, sans;
+  /* TITULOS ---- */
+  /* LINKS ---- */
 }
-
-p {
+body p {
   line-height: 1.3em;
   padding-bottom: 1.5em;
 }
-
-article li {
+body article li {
   list-style: circle;
   line-height: 1.3em;
   margin-left: 20px;
 }
-
-/* TITULOS ---- */
-h1, h2, h3, h4, h5, h6 {
+body h1, body h2, body h3, body h4, body h5, body h6 {
   font-family: "nunitobold", Arial, sans;
 }
-
-h1, h2 {
+body h1, body h2 {
   text-transform: uppercase;
 }
-
-h1 {
+body h1 {
   font-size: 50px;
   text-align: center;
   margin: 0 0 1em 0;
 }
-
-h2 {
+body h2 {
   font-size: 30px;
   text-align: center;
   margin: 0 0 1em 0;
 }
-
-h3 {
+body h3 {
   font-size: 25px;
   margin: 0 0 1em 0;
 }
-
-h4 {
+body h4 {
   font-size: 20px;
   margin: 0.5em 0;
 }
-
-/* LINKS ---- */
-a {
+body a {
   text-decoration: none;
   color: white;
 }
-
-#interna {
+body #interna {
   margin-bottom: 200px;
 }
-#interna a:hover {
+body #interna a:hover {
   color: #001b1b;
 }
-
-.link-contacto {
+body .link-contacto {
   background: url("../imagenes/contacto.png") no-repeat;
   display: block;
   height: 81px;
@@ -293,7 +279,7 @@ nav > ul > li:hover ul, nav > ul > li.active ul {
 
 /* SLIDER ---- */
 #slider {
-  height: 545px;
+  height: 600px;
   overflow: hidden;
   background: #c1ad9f;
   margin-top: 80px;
@@ -301,14 +287,12 @@ nav > ul > li:hover ul, nav > ul > li.active ul {
 }
 #slider img {
   width: 100%;
-  min-height: 550px;
+  min-height: 600px;
 }
-
-.nivo-controlNav {
+#slider .nivo-controlNav {
   display: none;
 }
-
-.slidesjs-next {
+#slider .slidesjs-next {
   position: relative;
   z-index: 9001;
   background: url("../imagenes/next.png") no-repeat right top;
@@ -317,8 +301,7 @@ nav > ul > li:hover ul, nav > ul > li.active ul {
   height: 56px;
   right: 0px;
 }
-
-.slidesjs-previous {
+#slider .slidesjs-previous {
   position: relative;
   z-index: 9002;
   background: url("../imagenes/prev.png") no-repeat right top;
@@ -330,11 +313,10 @@ nav > ul > li:hover ul, nav > ul > li.active ul {
 /* BLOQUE DE CONTENIDO AZUL ---- */
 #interna, #home-01 {
   *zoom: 1;
-  background: url("../imagenes/bg-seccion.png") no-repeat;
-  background-size: cover;
-  padding-top: 180px;
+  background: url("../imagenes/bg-seccion.png") no-repeat top center;
+  padding-top: 250px;
   position: relative;
-  margin-top: -200px;
+  margin-top: -300px;
   z-index: 1800;
 }
 #interna:before, #interna:after, #home-01:before, #home-01:after {
@@ -347,25 +329,27 @@ nav > ul > li:hover ul, nav > ul > li.active ul {
 
 /* HOME ---- */
 #home-02 {
-  background: url("../imagenes/bg-01.png") no-repeat;
+  background: url("../imagenes/bg-01.png");
   z-index: 1810;
+  margin-top: -100px;
 }
 
 #home-03 {
-  background: url("../imagenes/bg-02.png") no-repeat;
+  background: url("../imagenes/bg-02.png");
   z-index: 1820;
-  margin-top: -160px;
+  margin-top: -300px;
 }
 
 #home-04 {
-  background: url("../imagenes/bg-03.png") no-repeat;
+  background: url("../imagenes/bg-03.png");
   z-index: 1830;
-  margin-top: -160px;
+  margin-top: -300px;
 }
 
 #home-02, #home-03, #home-04 {
-  background-size: cover;
-  padding-top: 130px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding-top: 250px;
   position: relative;
   *zoom: 1;
 }
@@ -377,7 +361,7 @@ nav > ul > li:hover ul, nav > ul > li.active ul {
   clear: both;
 }
 #home-02 article, #home-03 article, #home-04 article {
-  padding-bottom: 120px;
+  padding-bottom: 180px;
   *zoom: 1;
 }
 #home-02 article:before, #home-02 article:after, #home-03 article:before, #home-03 article:after, #home-04 article:before, #home-04 article:after {

@@ -12,17 +12,14 @@ $img: "../imagenes/"
 
 /* RESET ---- */
 @import "compass/reset"
-/* ---- RESET */
 
 /* FIX PARA EL GRID ---- */
 @import "bourbon/bourbon"
 @import "neat/neat"
-/* ---- FIX PARA EL GRID */
 
 /* FONT FACE ---- */
 @import "_fonts"
 @import "_font-social-media"
-/* ---- FONT FACE */
 
 /* GENERAL ---- */
 body 
@@ -30,53 +27,53 @@ body
 	background: $primario
 	font-family: 'DroidSansRegular', Arial, sans
 
-p
-	line-height: 1.3em
-	padding-bottom: 1.5em
+	p
+		line-height: 1.3em
+		padding-bottom: 1.5em
 
-article li
-	list-style: circle
-	line-height: 1.3em
-	margin-left: 20px
+	article li
+		list-style: circle
+		line-height: 1.3em
+		margin-left: 20px
 
-/* TITULOS ---- */
-h1, h2, h3, h4, h5, h6
-	font-family: 'nunitobold', Arial, sans
-h1,h2
-	text-transform: uppercase
+	/* TITULOS ---- */
+	h1, h2, h3, h4, h5, h6
+		font-family: 'nunitobold', Arial, sans
+	h1,h2
+		text-transform: uppercase
 
-h1 
-	font-size: 50px
-	text-align: center
-	margin: 0 0 1em 0
-h2
-	font-size: 30px
-	text-align: center
-	margin: 0 0 1em 0
-h3
-	font-size: 25px
-	margin: 0 0 1em 0
-h4
-	font-size: 20px
-	margin: .5em 0
+	h1 
+		font-size: 50px
+		text-align: center
+		margin: 0 0 1em 0
+	h2
+		font-size: 30px
+		text-align: center
+		margin: 0 0 1em 0
+	h3
+		font-size: 25px
+		margin: 0 0 1em 0
+	h4
+		font-size: 20px
+		margin: .5em 0
 
-/* LINKS ---- */
-a 
-	text-decoration: none
-	color: white
-#interna
-	margin-bottom: 200px
-	a:hover
-		color: darken($primario, 20)
-.link-contacto
-	background: url("#{$img}contacto.png") no-repeat
-	display: block
-	height: 81px
-	line-height: 81px
-	width: 236px
-	text-align: center
-	font-size: 1.3em
-	font-family: "nunitobold"
+	/* LINKS ---- */
+	a 
+		text-decoration: none
+		color: white
+	#interna
+		margin-bottom: 200px
+		a:hover
+			color: darken($primario, 20)
+	.link-contacto
+		background: url("#{$img}contacto.png") no-repeat
+		display: block
+		height: 81px
+		line-height: 81px
+		width: 236px
+		text-align: center
+		font-size: 1.3em
+		font-family: "nunitobold"
 
 /* HEADER ---- */
 header 
@@ -144,7 +141,7 @@ nav
 
 /* SLIDER ---- */
 #slider
-	height: 545px
+	height: 600px
 	overflow: hidden
 	background: #C1AD9F
 	margin-top: 80px
@@ -152,59 +149,60 @@ nav
 
 	img
 		width: 100%
-		min-height: 550px
+		min-height: 600px
 
-.nivo-controlNav 
-	display: none
+	.nivo-controlNav 
+		display: none
 
-.slidesjs-next
-	position: relative
-	z-index: 9001
-	background: url("#{$img}next.png") no-repeat right top
-	display: block
-	width: 92px
-	height: 56px
-	right: 0px	
+	.slidesjs-next
+		position: relative
+		z-index: 9001
+		background: url("#{$img}next.png") no-repeat right top
+		display: block
+		width: 92px
+		height: 56px
+		right: 0px	
 
-.slidesjs-previous
-	position: relative
-	z-index: 9002
-	background: url("#{$img}prev.png") no-repeat right top
-	display: block
-	width: 106px
-	height: 56px	
+	.slidesjs-previous
+		position: relative
+		z-index: 9002
+		background: url("#{$img}prev.png") no-repeat right top
+		display: block
+		width: 106px
+		height: 56px	
 
 /* BLOQUE DE CONTENIDO AZUL ---- */
 #interna, #home-01
 	@include clearfix
-	background: url("#{$img}bg-seccion.png") no-repeat
-	background-size: cover
-	padding-top: 180px
+	background: url("#{$img}bg-seccion.png") no-repeat top center
+	padding-top: 250px
 	position: relative
-	margin-top: -200px
+	margin-top: -300px
 	z-index: 1800
 
 /* HOME ---- */
 #home-02 
-	background: url("#{$img}bg-01.png") no-repeat
+	background: url("#{$img}bg-01.png")
 	z-index: 1810
+	margin-top: -100px
 #home-03 
-	background: url("#{$img}bg-02.png") no-repeat
+	background: url("#{$img}bg-02.png")
 	z-index: 1820
-	margin-top: -160px
+	margin-top: -300px
 #home-04 
-	background: url("#{$img}bg-03.png") no-repeat
+	background: url("#{$img}bg-03.png")
 	z-index: 1830
-	margin-top: -160px
+	margin-top: -300px
 
 #home-02, #home-03, #home-04 
-	background-size: cover
-	padding-top: 130px
+	background-repeat: no-repeat
+	background-position: top center
+	padding-top: 250px
 	position: relative
 	@include clearfix
 
 	article
-		padding-bottom: 120px
+		padding-bottom: 180px
 		@include clearfix
 		p
 			font-weight: bold
