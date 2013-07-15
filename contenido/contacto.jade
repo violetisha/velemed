@@ -16,6 +16,12 @@ html(lang='es-MX')
 				p Para nosotros es muy importante tu opinión. Por lo mismo nos ponemos a tus órdenes para resolver cualquier tipo de duda o aclaración, o cualquier tipo de comentario al respecto.
 				.form
 					label 
+						span Sector:
+						select
+							option(value="Gobierno", label="Gobierno")
+							option(value="Empresa", label="Empresa")
+							option(value="Laboratorio", label="Laboratorio")
+					label 
 						span Nombre: 
 						input(type="text")
 					label 
@@ -30,7 +36,20 @@ html(lang='es-MX')
 					label 
 						span Mensaje:
 						textarea
-					button(type="submit") Enviar
+					label.check
+						input(type="checkbox", required="true")
+						| Acepto los términos del 
+						a(href="#aviso-privacidad")#mostrar-aviso.underline Aviso de Privacidad
+
+					#aviso-privacidad
+						h3 Aviso de Privacidad
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut accumsan congue augue, nec egestas ante malesuada nec. In id diam est. Nullam quis tincidunt mi, eu feugiat leo. Aliquam quis nulla sed sem laoreet gravida molestie id dui. Curabitur et tortor ultricies elit aliquam commodo a et lacus. Maecenas at venenatis massa. Nulla suscipit urna pellentesque justo pretium tristique. Aenean eget purus neque. Etiam ut facilisis felis, non adipiscing est. Ut mauris quam, vulputate et felis non, convallis malesuada est. Mauris diam ipsum, consequat blandit malesuada non, lacinia vel magna. Cras ante augue, porttitor et tincidunt ut, convallis sit amet eros. In orci est, vestibulum nec luctus tempus, scelerisque auctor libero. Quisque facilisis fermentum ante, in mattis dolor vulputate quis. Integer sit amet nibh quis justo tincidunt bibendum nec et enim.
+						p Pellentesque ullamcorper sagittis diam nec egestas. Integer pharetra fermentum justo et viverra. Etiam malesuada sapien neque. Sed vitae quam ut elit aliquet elementum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam laoreet sem nec urna tincidunt vulputate. Sed quis purus tellus. Donec quis ipsum nisl. Nam consectetur lectus dolor, id congue nunc pretium id. Quisque in sapien convallis, imperdiet enim sed, ornare mi. Fusce ac ullamcorper ligula. Suspendisse erat nibh, rutrum sed dui et, tempor elementum mi. Maecenas felis ante, eleifend feugiat facilisis quis, fringilla vitae mi. Duis et fermentum metus. Mauris tincidunt sem vel orci tempor, et malesuada sem ullamcorper. Sed eu tellus at metus semper tempus sed sit amet neque.
+						p Nullam nisi quam, consequat eu iaculis sed, fermentum non odio. Vestibulum sit amet ligula sit amet urna eleifend faucibus ac in metus. Morbi nibh tortor, gravida pellentesque aliquet at, consequat porta diam. Phasellus in placerat nulla, in fermentum massa. Proin in molestie mi, et placerat velit. Nunc quis justo at nisl rhoncus tristique eu quis massa. Fusce nisl massa, lobortis non est sed, gravida pellentesque magna. Sed fermentum facilisis magna quis facilisis. Duis ut arcu quis ligula viverra aliquet quis et lacus. Quisque ullamcorper eget arcu sed laoreet. Aenean vestibulum ultrices ante at volutpat. Suspendisse sapien diam, auctor et sagittis ut, faucibus vitae arcu.
+
+					input(type="submit").enviar Enviar
+					
+
 				.address
 					h3 Corporativo
 

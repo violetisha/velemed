@@ -226,22 +226,25 @@ header {
   box-shadow: 0px 0px 15px black;
 }
 header #logo {
-  float: left;
+  position: absolute;
+  z-index: 3000;
+  left: -620px;
 }
 header #logo a {
   display: block;
   width: 170px;
   height: 148px;
   position: absolute;
-  z-index: 3000;
 }
 
 /* MENU ---- */
 nav {
   height: 80px;
-  width: 960px;
+  width: 800px;
   position: absolute;
   font-family: "Futura";
+  z-index: 4000;
+  right: 0px;
 }
 nav > ul {
   margin: 0;
@@ -409,6 +412,32 @@ nav > ul > li:hover ul, nav > ul > li.active ul {
   clear: both;
 }
 
+.g-implementaciones, .g-umoviles, .e-implementaciones, .e-umoviles {
+  display: block;
+  width: 200px;
+  height: 200px;
+  background-position: top left;
+}
+.g-implementaciones:hover, .g-umoviles:hover, .e-implementaciones:hover, .e-umoviles:hover {
+  background-position: top right;
+}
+
+.g-implementaciones {
+  background-image: url("../imagenes/g_implementaciones.png");
+}
+
+.g-umoviles {
+  background-image: url("../imagenes/g_umoviles.png");
+}
+
+.g-implementaciones {
+  background-image: url("../imagenes/e_implementaciones.png");
+}
+
+.e-umoviles {
+  background-image: url("../imagenes/e_umoviles.png");
+}
+
 /* TABS ---- */
 #tabs > h2 {
   float: left;
@@ -461,22 +490,32 @@ nav > ul > li:hover ul, nav > ul > li.active ul {
   margin-top: 20px;
   border-right: 1px solid #70c1bf;
   padding-right: 20px;
+  *zoom: 1;
 }
 .form:last-child {
   margin-right: 0;
 }
+.form:before, .form:after {
+  content: " ";
+  display: table;
+}
+.form:after {
+  clear: both;
+}
 .form label {
   display: block;
-  margin: 10px 0;
+  margin: 0 0 20px 0;
 }
 .form label span {
-  width: 80px;
+  width: 100px;
   display: block;
   float: left;
   line-height: 26px;
+  text-align: right;
+  padding-right: 10px;
 }
-.form label textarea, .form label input {
-  width: 530px;
+.form label textarea, .form label input, .form label select {
+  width: 400px;
   padding: 5px 10px;
   border: none;
   background: #bfdfdf;
@@ -488,10 +527,25 @@ nav > ul > li:hover ul, nav > ul > li.active ul {
   -webkit-border-bottom-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
+.form label.check {
+  padding-left: 100px;
+  padding-right: 10px;
+  text-align: right;
+}
+.form label.check input {
+  width: auto;
+  padding: 0px;
+  margin-right: 10px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
+}
 .form label textarea {
   height: 200px;
 }
-.form > button {
+.form > .enviar {
   float: right;
   background: #00bfb8;
   border: none;
@@ -506,7 +560,7 @@ nav > ul > li:hover ul, nav > ul > li.active ul {
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
   border-radius: 15px;
-  box-shadow: -1px -3px 3px rgba(0, 0, 0, 0.5) inset, 0 3px 3px white inset;
+  box-shadow: -1px -3px 3px rgba(0, 0, 0, 0.5) inset, 0 2px 3px rgba(255, 255, 255, 0.8) inset;
 }
 
 .address {
@@ -518,6 +572,13 @@ nav > ul > li:hover ul, nav > ul > li.active ul {
 }
 .address:last-child {
   margin-right: 0;
+}
+
+#aviso-privacidad {
+  height: 10em;
+  overflow: auto;
+  margin: 20px 0;
+  display: none;
 }
 
 /* PANEL DE SOCIAL MEDIA ---- */
@@ -571,7 +632,7 @@ nav > ul > li:hover ul, nav > ul > li.active ul {
 footer {
   background: url("../imagenes/bg-footer.png") no-repeat top center;
   height: 250px;
-  padding-top: 150px;
+  padding-top: 180px;
   text-align: right;
   z-index: 1990;
   position: relative;
@@ -608,4 +669,8 @@ footer p {
 .float-right {
   float: right;
   margin-left: 20px;
+}
+
+.underline {
+  border-bottom: 1px solid white;
 }

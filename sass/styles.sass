@@ -91,20 +91,24 @@ header
 	
 
 	#logo
-		float: left
+		position: absolute
+		z-index: 3000
+		left: -620px
 		a
 			display: block
 			width: 170px
 			height: 148px
 			position: absolute
-			z-index: 3000
+			
 
 /* MENU ---- */
 nav
 	height: 80px
-	width: 960px
+	width: 800px
 	position: absolute
 	font-family: 'Futura'
+	z-index: 4000
+	right: 0px
 	>ul
 		margin: 0
 		padding: 0
@@ -231,6 +235,25 @@ nav
 		padding-bottom: 180px
 		@include clearfix
 
+.g-implementaciones, .g-umoviles, .e-implementaciones, .e-umoviles
+	display: block
+	width: 200px
+	height: 200px
+	background-position: top left
+
+	&:hover
+		background-position: top right
+
+.g-implementaciones
+	background-image: url("#{$img}g_implementaciones.png")
+.g-umoviles
+	background-image: url("#{$img}g_umoviles.png")
+.g-implementaciones
+	background-image: url("#{$img}e_implementaciones.png")
+.e-umoviles
+	background-image: url("#{$img}e_umoviles.png")
+
+
 /* TABS ---- */
 #tabs 
 	>h2 
@@ -268,25 +291,39 @@ nav
 	margin-top: $spacer
 	border-right: 1px solid #70C1BF
 	padding-right: $spacer
+	@include clearfix
 	label
 		display: block
-		margin: $spacer/2 0
+		margin: 0 0 $spacer 0
 		span
-			width: 80px
+			width: 100px
 			display: block
 			float: left
 			line-height: 26px
-		textarea, input
-			width: 530px
+			text-align: right
+			padding-right: 10px
+		textarea, input, select
+			width: 400px
 			padding: $spacer/4 $spacer/2
 			border: none
 			background: #BFDFDF
 			resize: none
 			@include border-top-left-radius(20px)
 			@include border-bottom-left-radius(20px)
+
+		&.check
+			padding-left: 100px
+			padding-right: 10px
+			text-align: right
+			input
+				width: auto
+				padding: 0px
+				margin-right: $spacer/2
+				@include border-radius(0px)
+
 		textarea
 			height: 200px
-	>button
+	>.enviar
 		float: right
 		background: #00bfb8
 		border: none
@@ -297,12 +334,17 @@ nav
 		font-family: "OpenSans"
 		font-size: 1em
 		@include border-radius(15px)
-		@include box-shadow(-1px -3px 3px rgba(0, 0, 0, .5) inset, 0 3px 3px white inset)
-
+		@include box-shadow(-1px -3px 3px rgba(0, 0, 0, .5) inset, 0 2px 3px rgba(255, 255, 255, .8) inset)
 
 .address
 	@include span-columns(3)
 	margin-top: $spacer
+
+#aviso-privacidad
+	height: 10em
+	overflow: auto
+	margin: $spacer 0
+	display: none
 
 /* PANEL DE SOCIAL MEDIA ---- */
 #social
@@ -346,7 +388,7 @@ nav
 footer
 	background: url("#{$img}bg-footer.png") no-repeat top center
 	height: 250px
-	padding-top: 150px
+	padding-top: 180px
 	text-align: right
 	z-index: 1990
 	position: relative
@@ -376,3 +418,5 @@ footer
 .float-right
 	float: right
 	margin-left: $spacer
+.underline
+	border-bottom: 1px solid #FFF

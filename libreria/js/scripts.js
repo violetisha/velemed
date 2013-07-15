@@ -27,6 +27,17 @@ $(document).ready(function(){
 	});
 
 	//slider
+	var fotos = []
+	$("#slider > div").each(function (i, e) {
+		fotos.push($(e).css("background-image"));
+	});
+
+	fotos.sort(function() {return 0.5 - Math.random()})
+	
+	$("#slider > div").each(function (i, e) {
+		$(this).css("background-image", fotos[i]);
+	});
+
 	$('#slider').slidesjs({
         width: 940,
         height: 528,
@@ -51,4 +62,15 @@ $(document).ready(function(){
 	        interval: 3000
 	    }
       });
+
+	//mostrar TOS
+	$('#mostrar-aviso').click(function() {
+		if($('#aviso-privacidad').hasClass("abierto")) {
+			$('#aviso-privacidad').slideUp('slow');
+			$('#aviso-privacidad').removeClass('abierto');
+		} else {
+			$('#aviso-privacidad').slideDown('slow');
+		$('#aviso-privacidad').addClass('abierto');
+		}
+	});
 });
