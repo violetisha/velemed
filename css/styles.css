@@ -64,33 +64,41 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* FONT FACE ---- */
 @font-face {
-  font-family: "nunitobold";
-  src: url("../font/nunito-bold-webfont.eot");
-  src: url("../font/nunito-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../font/nunito-bold-webfont.woff") format("woff"), url("../font/nunito-bold-webfont.ttf") format("truetype"), url("../font/nunito-bold-webfont.svg#nunitobold") format("svg");
+  font-family: "OpenSansBold";
+  src: url("../font/OpenSans-Bold-webfont.eot");
+  src: url("../font/OpenSans-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../font/OpenSans-Bold-webfont.woff") format("woff"), url("../font/OpenSans-Bold-webfont.ttf") format("truetype"), url("../font/OpenSans-Bold-webfont.svg#OpenSansBold") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "nunitolight";
-  src: url("../font/nunito-light-webfont.eot");
-  src: url("../font/nunito-light-webfont.eot?#iefix") format("embedded-opentype"), url("../font/nunito-light-webfont.woff") format("woff"), url("../font/nunito-light-webfont.ttf") format("truetype"), url("../font/nunito-light-webfont.svg#nunitolight") format("svg");
+  font-family: "OpenSansLight";
+  src: url("../font/OpenSans-Light-webfont.eot");
+  src: url("../font/OpenSans-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../font/OpenSans-Light-webfont.woff") format("woff"), url("../font/OpenSans-Light-webfont.ttf") format("truetype"), url("../font/OpenSans-Light-webfont.svg#OpenSansLight") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "nunitoregular";
-  src: url("../font/nunito-regular-webfont.eot");
-  src: url("../font/nunito-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../font/nunito-regular-webfont.woff") format("woff"), url("../font/nunito-regular-webfont.ttf") format("truetype"), url("../font/nunito-regular-webfont.svg#nunitoregular") format("svg");
+  font-family: "OpenSans";
+  src: url("../font/OpenSans-Regular-webfont.eot");
+  src: url("../font/OpenSans-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../font/OpenSans-Regular-webfont.woff") format("woff"), url("../font/OpenSans-Regular-webfont.ttf") format("truetype"), url("../font/OpenSans-Regular-webfont.svg#OpenSans") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "DroidSansRegular";
-  src: url("../font/DroidSans-webfont.eot");
-  src: url("../font/DroidSans-webfont.eot?#iefix") format("embedded-opentype"), url("../font/DroidSans-webfont.woff") format("woff"), url("../font/DroidSans-webfont.ttf") format("truetype"), url("../font/DroidSans-webfont.svg#DroidSansRegular") format("svg");
+  font-family: "OpenSansSemibold";
+  src: url("../font/OpenSans-Semibold-webfont.eot");
+  src: url("../font/OpenSans-Semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../font/OpenSans-Semibold-webfont.woff") format("woff"), url("../font/OpenSans-Semibold-webfont.ttf") format("truetype"), url("../font/OpenSans-Semibold-webfont.svg#OpenSansSemibold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futura";
+  src: url("../font/futuraorto_bold-webfont.eot");
+  src: url("../futuraorto_bold-webfont.eot?#iefix") format("embedded-opentype"), url("../font/futuraorto_bold-webfont.woff") format("woff"), url("../font/futuraorto_bold-webfont.ttf") format("truetype"), url("../font/futuraorto_bold-webfont.svg#Futura") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -145,21 +153,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body {
   color: white;
   background: #008081;
-  font-family: "DroidSansRegular", Arial, sans;
+  font-family: "OpenSans", Helvetica, Arial;
   /* TITULOS ---- */
   /* LINKS ---- */
 }
 body p {
   line-height: 1.3em;
   padding-bottom: 1.5em;
+  font-size: 0.9em;
 }
 body article li {
   list-style: circle;
   line-height: 1.3em;
   margin-left: 20px;
+  font-size: 0.9em;
 }
 body h1, body h2, body h3, body h4, body h5, body h6 {
-  font-family: "nunitobold", Arial, sans;
+  font-family: "Futura", Arial, sans;
 }
 body h1, body h2 {
   text-transform: uppercase;
@@ -171,8 +181,7 @@ body h1 {
 }
 body h2 {
   font-size: 30px;
-  text-align: center;
-  margin: 0 0 1em 0;
+  margin: 0 0 0.5em 0;
 }
 body h3 {
   font-size: 25px;
@@ -200,7 +209,10 @@ body .link-contacto {
   width: 236px;
   text-align: center;
   font-size: 1.3em;
-  font-family: "nunitobold";
+  font-family: "Futura";
+  float: left;
+  position: relative;
+  z-index: 999999;
 }
 
 /* HEADER ---- */
@@ -229,7 +241,7 @@ nav {
   height: 80px;
   width: 960px;
   position: absolute;
-  font-family: "nunitolight";
+  font-family: "Futura";
 }
 nav > ul {
   margin: 0;
@@ -253,7 +265,7 @@ nav > ul > li > a {
   vertical-align: middle;
   width: 150px;
   text-transform: uppercase;
-  font-family: "nunitobold";
+  font-family: "Futura";
 }
 nav > ul > li ul {
   display: none;
@@ -267,6 +279,8 @@ nav > ul > li ul li {
 nav > ul > li ul li a {
   display: block;
   padding: 10px 0;
+  font-family: "OpenSans";
+  font-size: 0.8em;
 }
 nav > ul > li ul li a:hover {
   background: #00bfb8;
@@ -282,7 +296,7 @@ nav > ul > li:hover ul, nav > ul > li.active ul {
 #slider {
   height: 600px;
   overflow: hidden;
-  background: #c1ad9f;
+  background: #f2f2f2;
   margin-top: 80px;
   position: relative;
 }
@@ -317,7 +331,7 @@ nav > ul > li:hover ul, nav > ul > li.active ul {
 #botones-slider a.slidesjs-previous {
   background-position: top left;
   left: 830px;
-  top: -126px;
+  top: -116px;
 }
 #botones-slider a.slidesjs-previous:hover {
   background-position: bottom left;
@@ -325,7 +339,7 @@ nav > ul > li:hover ul, nav > ul > li.active ul {
 #botones-slider a.slidesjs-next {
   background-position: top right;
   left: 880px;
-  top: -126px;
+  top: -116px;
 }
 #botones-slider a.slidesjs-next:hover {
   background-position: bottom right;
@@ -335,10 +349,11 @@ nav > ul > li:hover ul, nav > ul > li.active ul {
 #interna, #home-01 {
   *zoom: 1;
   background: url("../imagenes/bg-seccion.png") no-repeat top center;
-  padding-top: 250px;
+  padding-top: 200px;
   position: relative;
-  margin-top: -300px;
+  margin-top: -200px;
   z-index: 1800;
+  min-height: 500px;
 }
 #interna:before, #interna:after, #home-01:before, #home-01:after {
   content: " ";
@@ -358,19 +373,20 @@ nav > ul > li:hover ul, nav > ul > li.active ul {
 #home-03 {
   background: url("../imagenes/bg-02.png");
   z-index: 1820;
-  margin-top: -300px;
+  margin-top: -200px;
 }
 
 #home-04 {
   background: url("../imagenes/bg-03.png");
   z-index: 1830;
-  margin-top: -300px;
+  margin-top: -200px;
 }
 
 #home-02, #home-03, #home-04 {
   background-repeat: no-repeat;
   background-position: top center;
-  padding-top: 250px;
+  padding-top: 200px;
+  min-height: 500px;
   position: relative;
   *zoom: 1;
 }
@@ -391,9 +407,6 @@ nav > ul > li:hover ul, nav > ul > li.active ul {
 }
 #home-02 article:after, #home-03 article:after, #home-04 article:after {
   clear: both;
-}
-#home-02 article p, #home-03 article p, #home-04 article p {
-  font-weight: bold;
 }
 
 /* TABS ---- */
@@ -467,6 +480,7 @@ nav > ul > li:hover ul, nav > ul > li.active ul {
   padding: 5px 10px;
   border: none;
   background: #bfdfdf;
+  resize: none;
   -moz-border-radius-topleft: 20px;
   -webkit-border-top-left-radius: 20px;
   border-top-left-radius: 20px;
@@ -479,6 +493,20 @@ nav > ul > li:hover ul, nav > ul > li.active ul {
 }
 .form > button {
   float: right;
+  background: #00bfb8;
+  border: none;
+  outline: none;
+  padding: 8px 15px;
+  text-transform: uppercase;
+  color: white;
+  font-family: "OpenSans";
+  font-size: 1em;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
+  box-shadow: -1px -3px 3px rgba(0, 0, 0, 0.5) inset, 0 3px 3px white inset;
 }
 
 .address {
@@ -543,11 +571,11 @@ nav > ul > li:hover ul, nav > ul > li.active ul {
 footer {
   background: url("../imagenes/bg-footer.png") no-repeat top center;
   height: 250px;
-  padding-top: 180px;
+  padding-top: 150px;
   text-align: right;
   z-index: 1990;
   position: relative;
-  margin-top: -250px;
+  margin-top: -200px;
 }
 footer p {
   padding-bottom: 0.3em;
@@ -556,6 +584,12 @@ footer p {
 /* CLASES UTILES ---- */
 .container {
   width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.container960 {
+  width: 960px;
   margin: 0 auto;
   position: relative;
 }

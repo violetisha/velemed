@@ -25,20 +25,22 @@ $img: "../imagenes/"
 body 
 	color: white
 	background: $primario
-	font-family: 'DroidSansRegular', Arial, sans
+	font-family: 'OpenSans', Helvetica, Arial
 
 	p
 		line-height: 1.3em
 		padding-bottom: 1.5em
+		font-size: .9em
 
 	article li
 		list-style: circle
 		line-height: 1.3em
 		margin-left: 20px
+		font-size: .9em
 
 	/* TITULOS ---- */
 	h1, h2, h3, h4, h5, h6
-		font-family: 'nunitobold', Arial, sans
+		font-family: 'Futura', Arial, sans
 	h1,h2
 		text-transform: uppercase
 
@@ -48,8 +50,7 @@ body
 		margin: 0 0 1em 0
 	h2
 		font-size: 30px
-		text-align: center
-		margin: 0 0 1em 0
+		margin: 0 0 .5em 0
 	h3
 		font-size: 25px
 		margin: 0 0 1em 0
@@ -73,7 +74,10 @@ body
 		width: 236px
 		text-align: center
 		font-size: 1.3em
-		font-family: "nunitobold"
+		font-family: "Futura"
+		float: left
+		position: relative
+		z-index: 999999
 
 /* HEADER ---- */
 header 
@@ -100,7 +104,7 @@ nav
 	height: 80px
 	width: 960px
 	position: absolute
-	font-family: 'nunitolight'
+	font-family: 'Futura'
 	>ul
 		margin: 0
 		padding: 0
@@ -121,7 +125,7 @@ nav
 				vertical-align: middle
 				width: 150px
 				text-transform: uppercase
-				font-family: 'nunitobold'
+				font-family: 'Futura'
 			ul
 				display: none
 				position: absolute
@@ -133,6 +137,8 @@ nav
 					a
 						display: block
 						padding: 10px 0
+						font-family: 'OpenSans'
+						font-size: .8em
 						&:hover
 							background: #00BFB8
 
@@ -145,7 +151,7 @@ nav
 #slider
 	height: 600px
 	overflow: hidden
-	background: #C1AD9F
+	background: #F2F2F2
 	margin-top: 80px
 	position: relative
 
@@ -178,14 +184,14 @@ nav
 		&.slidesjs-previous 
 			background-position: top left
 			left: 830px
-			top: -126px
+			top: -116px
 			&:hover
 				background-position: bottom left
 
 		&.slidesjs-next 
 			background-position: top right
 			left: 880px
-			top: -126px
+			top: -116px
 			&:hover
 				background-position: bottom right
 
@@ -193,10 +199,11 @@ nav
 #interna, #home-01
 	@include clearfix
 	background: url("#{$img}bg-seccion.png") no-repeat top center
-	padding-top: 250px
+	padding-top: 200px
 	position: relative
-	margin-top: -300px
+	margin-top: -200px
 	z-index: 1800
+	min-height: 500px
 
 /* HOME ---- */
 #home-02 
@@ -206,24 +213,23 @@ nav
 #home-03 
 	background: url("#{$img}bg-02.png")
 	z-index: 1820
-	margin-top: -300px
+	margin-top: -200px
 #home-04 
 	background: url("#{$img}bg-03.png")
 	z-index: 1830
-	margin-top: -300px
+	margin-top: -200px
 
 #home-02, #home-03, #home-04 
 	background-repeat: no-repeat
 	background-position: top center
-	padding-top: 250px
+	padding-top: 200px
+	min-height: 500px
 	position: relative
 	@include clearfix
 
 	article
 		padding-bottom: 180px
 		@include clearfix
-		p
-			font-weight: bold
 
 /* TABS ---- */
 #tabs 
@@ -275,12 +281,24 @@ nav
 			padding: $spacer/4 $spacer/2
 			border: none
 			background: #BFDFDF
+			resize: none
 			@include border-top-left-radius(20px)
 			@include border-bottom-left-radius(20px)
 		textarea
 			height: 200px
 	>button
 		float: right
+		background: #00bfb8
+		border: none
+		outline: none
+		padding: 8px 15px
+		text-transform: uppercase
+		color: white
+		font-family: "OpenSans"
+		font-size: 1em
+		@include border-radius(15px)
+		@include box-shadow(-1px -3px 3px rgba(0, 0, 0, .5) inset, 0 3px 3px white inset)
+
 
 .address
 	@include span-columns(3)
@@ -328,11 +346,11 @@ nav
 footer
 	background: url("#{$img}bg-footer.png") no-repeat top center
 	height: 250px
-	padding-top: 180px
+	padding-top: 150px
 	text-align: right
 	z-index: 1990
 	position: relative
-	margin-top: -250px
+	margin-top: -200px
 
 	p
 		padding-bottom: .3em
@@ -340,6 +358,11 @@ footer
 /* CLASES UTILES ---- */
 .container
 	width: 800px
+	margin: 0 auto
+	position: relative
+
+.container960
+	width: 960px
 	margin: 0 auto
 	position: relative
 
