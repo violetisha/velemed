@@ -14,7 +14,7 @@ html(lang='es-MX')
 				
 				h1 Contacto 
 				p Para nosotros es muy importante tu opinión. Por lo mismo nos ponemos a tus órdenes para resolver cualquier tipo de duda o aclaración, o cualquier tipo de comentario al respecto.
-				.form
+				form.form
 					label 
 						span Sector:
 						select
@@ -23,21 +23,21 @@ html(lang='es-MX')
 							option(value="Laboratorio", label="Laboratorio")
 					label 
 						span Nombre: 
-						input(type="text")
+						input(type="text", name="nombre")
 					label 
 						span Empresa:
-						input(type="text") 
+						input(type="text", name="empresa") 
 					label 
 						span E-mail: 
-						input(type="text") 
+						input(type="text", name="email") 
 					label 
 						span Teléfono:
-						input(type="text")
+						input(type="text", name="telefono")
 					label 
 						span Mensaje:
 						textarea
 					label.check
-						input(type="checkbox", required="true")
+						input(type="checkbox", name="agree")
 						| Acepto los términos del 
 						a(href="#aviso-privacidad")#mostrar-aviso.underline Aviso de Privacidad
 

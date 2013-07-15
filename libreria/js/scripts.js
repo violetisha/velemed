@@ -74,3 +74,44 @@ $(document).ready(function(){
 		}
 	});
 });
+
+
+// validacion de formulario
+(function($,W,D)
+{
+    var JQUERY4U = {};
+
+    JQUERY4U.UTIL =
+    {
+        setupFormValidation: function()
+        {
+            //form validation rules
+            $(".form").validate({
+                rules: {
+                    nombre: "required",
+                    empresa: "required",
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    agree: "required"
+                },
+                messages: {
+                    nombre: "Por favor, escriba su nombre.",
+                    empresa: "Por favor, escriba su empresa.",
+                    email: "Por favor, ingrese una direccion de correo válida",
+                    agree: "Por favor, acepte nuestro Aviso de Privacidad"
+                },
+                submitHandler: function(form) {
+                    form.submit();
+                }
+            });
+        }
+    }
+
+    //when the dom has loaded setup form validation rules
+    $(D).ready(function($) {
+        JQUERY4U.UTIL.setupFormValidation();
+    });
+
+})(jQuery, window, document);

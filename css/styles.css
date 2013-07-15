@@ -674,3 +674,23 @@ footer p {
 .underline {
   border-bottom: 1px solid white;
 }
+
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+.error {
+  color: #2ad27a;
+  font-size: 0.7em;
+}
+
+input.error {
+  color: red;
+}
