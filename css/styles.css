@@ -242,6 +242,7 @@ nav > ul > li {
   text-align: center;
   float: left;
   background: url("../imagenes/bg-menu.png") no-repeat bottom center;
+  box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
 }
 nav > ul > li.intranet {
   background: none;
@@ -285,29 +286,49 @@ nav > ul > li:hover ul, nav > ul > li.active ul {
   margin-top: 80px;
   position: relative;
 }
-#slider img {
-  width: 100%;
-  min-height: 600px;
+#slider #slide-01 {
+  background: url("../imagenes/foto-01.jpg") top center no-repeat;
+  width: 2500px;
+  height: 600px;
 }
-#slider .nivo-controlNav {
-  display: none;
+#slider #slide-02 {
+  background: url("../imagenes/foto-02.jpg") top center no-repeat;
+  width: 2500px;
+  height: 600px;
 }
-#slider .slidesjs-next {
+
+#botones-slider {
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 99999;
   position: relative;
-  z-index: 9001;
-  background: url("../imagenes/next.png") no-repeat right top;
-  display: block;
-  width: 92px;
-  height: 56px;
-  right: 0px;
 }
-#slider .slidesjs-previous {
-  position: relative;
-  z-index: 9002;
-  background: url("../imagenes/prev.png") no-repeat right top;
+#botones-slider a {
+  background: url("../imagenes/slider-nav.png") no-repeat;
   display: block;
-  width: 106px;
-  height: 56px;
+  width: 50px;
+  height: 48px;
+  position: absolute;
+  white-space: nowrap;
+  text-indent: 100%;
+  overflow: hidden;
+  z-index: 99998;
+}
+#botones-slider a.slidesjs-previous {
+  background-position: top left;
+  left: 830px;
+  top: -126px;
+}
+#botones-slider a.slidesjs-previous:hover {
+  background-position: bottom left;
+}
+#botones-slider a.slidesjs-next {
+  background-position: top right;
+  left: 880px;
+  top: -126px;
+}
+#botones-slider a.slidesjs-next:hover {
+  background-position: bottom right;
 }
 
 /* BLOQUE DE CONTENIDO AZUL ---- */
@@ -374,23 +395,6 @@ nav > ul > li:hover ul, nav > ul > li.active ul {
 #home-02 article p, #home-03 article p, #home-04 article p {
   font-weight: bold;
 }
-#home-02 article div, #home-03 article div, #home-04 article div {
-  display: block;
-  float: left;
-  margin-right: 2.35765%;
-  width: 48.82117%;
-}
-#home-02 article div:last-child, #home-03 article div:last-child, #home-04 article div:last-child {
-  margin-right: 0;
-}
-#home-02 article div h2, #home-03 article div h2, #home-04 article div h2 {
-  margin-top: 40px;
-  text-align: left;
-  font-size: 50px;
-}
-#home-02 article div.last, #home-03 article div.last, #home-04 article div.last {
-  margin-right: 0;
-}
 
 /* TABS ---- */
 #tabs > h2 {
@@ -398,18 +402,22 @@ nav > ul > li:hover ul, nav > ul > li.active ul {
   margin: 0 0 1em 0;
 }
 #tabs > ul {
-  text-align: right;
+  float: right;
 }
 #tabs > ul li {
-  display: inline-block;
+  text-align: center;
+  display: block;
+  float: left;
+  margin-right: 5px;
 }
 #tabs > ul li a {
   background: #01bfb9;
   font-size: 14px;
-  display: block;
+  display: table-cell;
+  height: 40px;
+  width: 145px;
   padding: 0 10px;
-  outline: none;
-  padding: 10px 15px;
+  vertical-align: middle;
 }
 #tabs > ul li a.active {
   background: #2ad27a;
@@ -522,11 +530,11 @@ nav > ul > li:hover ul, nav > ul > li.active ul {
   bottom: 30px;
   right: 30px;
   background: url("../imagenes/bg-top.png");
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
   text-transform: uppercase;
   text-align: center;
-  line-height: 70px;
+  line-height: 100px;
   font-size: 0.9em;
   z-index: 2000;
 }
@@ -534,13 +542,12 @@ nav > ul > li:hover ul, nav > ul > li.active ul {
 /* FOOTER ---- */
 footer {
   background: url("../imagenes/bg-footer.png") no-repeat top center;
-  background-size: cover;
-  height: 200px;
-  padding-top: 140px;
+  height: 250px;
+  padding-top: 180px;
   text-align: right;
   z-index: 1990;
   position: relative;
-  margin-top: -200px;
+  margin-top: -250px;
 }
 footer p {
   padding-bottom: 0.3em;
@@ -548,7 +555,7 @@ footer p {
 
 /* CLASES UTILES ---- */
 .container {
-  width: 960px;
+  width: 800px;
   margin: 0 auto;
   position: relative;
 }

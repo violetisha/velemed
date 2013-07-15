@@ -111,6 +111,8 @@ nav
 			text-align: center
 			float: left
 			background: url("#{$img}bg-menu.png") no-repeat bottom center
+			@include single-box-shadow(rgba(0,0,0,.2), 0px, 0px, 5px, 0px, inset)
+
 			&.intranet 
 				background: none
 			>a 
@@ -147,29 +149,45 @@ nav
 	margin-top: 80px
 	position: relative
 
-	img
-		width: 100%
-		min-height: 600px
+	#slide-01
+		background: url("#{$img}foto-01.jpg") top center no-repeat
+		width: 2500px
+		height: 600px
+	#slide-02
+		background: url("#{$img}foto-02.jpg") top center no-repeat
+		width: 2500px
+		height: 600px
 
-	.nivo-controlNav 
-		display: none
+#botones-slider
+	margin-left: auto
+	margin-right: auto
+	z-index: 99999
+	position: relative
 
-	.slidesjs-next
-		position: relative
-		z-index: 9001
-		background: url("#{$img}next.png") no-repeat right top
+	a 
+		background: url("#{$img}slider-nav.png") no-repeat
 		display: block
-		width: 92px
-		height: 56px
-		right: 0px	
+		width: 50px
+		height: 48px
+		position: absolute
+		white-space: nowrap
+		text-indent: 100%
+		overflow: hidden
+		z-index: 99998
 
-	.slidesjs-previous
-		position: relative
-		z-index: 9002
-		background: url("#{$img}prev.png") no-repeat right top
-		display: block
-		width: 106px
-		height: 56px	
+		&.slidesjs-previous 
+			background-position: top left
+			left: 830px
+			top: -126px
+			&:hover
+				background-position: bottom left
+
+		&.slidesjs-next 
+			background-position: top right
+			left: 880px
+			top: -126px
+			&:hover
+				background-position: bottom right
 
 /* BLOQUE DE CONTENIDO AZUL ---- */
 #interna, #home-01
@@ -207,15 +225,6 @@ nav
 		p
 			font-weight: bold
 
-		div
-			@include span-columns(6)
-			h2
-				margin-top: 40px
-				text-align: left
-				font-size: 50px
-			&.last
-				@include omega()
-
 /* TABS ---- */
 #tabs 
 	>h2 
@@ -223,16 +232,20 @@ nav
 		margin: 0 0 1em 0
 
 	>ul
-		text-align: right
+		float: right
 		li 
-			display: inline-block
+			text-align: center
+			display: block
+			float: left
+			margin-right: 5px
 			a
 				background: $terciario
 				font-size: 14px
-				display: block
+				display: table-cell
+				height: 40px
+				width: 145px
 				padding: 0 10px
-				outline: none
-				padding: 10px 15px
+				vertical-align: middle
 		li a.active
 			background: $green
 
@@ -303,31 +316,30 @@ nav
 	bottom: 30px
 	right: 30px
 	background: url("#{$img}bg-top.png")
-	width: 70px
-	height: 70px
+	width: 100px
+	height: 100px
 	text-transform: uppercase
 	text-align: center
-	line-height: 70px
+	line-height: 100px
 	font-size: .9em
 	z-index: 2000
 
 /* FOOTER ---- */
 footer
 	background: url("#{$img}bg-footer.png") no-repeat top center
-	background-size: cover
-	height: 200px
-	padding-top: 140px
+	height: 250px
+	padding-top: 180px
 	text-align: right
 	z-index: 1990
 	position: relative
-	margin-top: -200px
+	margin-top: -250px
 
 	p
 		padding-bottom: .3em
 
 /* CLASES UTILES ---- */
 .container
-	width: 960px
+	width: 800px
 	margin: 0 auto
 	position: relative
 
