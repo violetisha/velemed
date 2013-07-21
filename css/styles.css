@@ -377,6 +377,7 @@ nav > ul > li:hover ul, nav > ul > li.active ul {
   background: url("../imagenes/bg-02.png");
   z-index: 1820;
   margin-top: -200px;
+  text-align: right;
 }
 
 #home-04 {
@@ -399,6 +400,9 @@ nav > ul > li:hover ul, nav > ul > li.active ul {
 }
 #home-02:after, #home-03:after, #home-04:after {
   clear: both;
+}
+#home-02 h2, #home-03 h2, #home-04 h2 {
+  font-size: 3em;
 }
 #home-02 article, #home-03 article, #home-04 article {
   padding-bottom: 180px;
@@ -428,14 +432,16 @@ nav > ul > li:hover ul, nav > ul > li.active ul {
 
 .g-umoviles {
   background-image: url("../imagenes/g_umoviles.png");
+  margin-left: 40px !important;
 }
 
-.g-implementaciones {
+.e-implementaciones {
   background-image: url("../imagenes/e_implementaciones.png");
 }
 
 .e-umoviles {
   background-image: url("../imagenes/e_umoviles.png");
+  margin-right: 40px !important;
 }
 
 /* TABS ---- */
