@@ -1,3 +1,5 @@
+$img: "../imagenes/"
+
 // fix mennu
 nav 
 	right: 0px
@@ -11,10 +13,19 @@ nav
 #social
 	width: 25px
 	height: 92px
+	z-index: 9999999
 
 // fix footer
 footer
 	height: 60px
+
+#interna, #home-01
+	background: url("#{$img}bg-seccion.png") no-repeat top center
+	padding-top: 170px
+	position: relative
+	margin-top: -300px
+	z-index: 1800
+	min-height: 450px
 
 // fix grid
 #home-02, #home-03, #home-04 
@@ -34,3 +45,13 @@ footer
 
 #interna, #home-01
 	min-height: 140px
+
+#home-02
+	.home-texto
+		width: 360px
+		float: left
+
+#home-03, #home-04
+	.home-texto
+		width: 310px
+		float: left

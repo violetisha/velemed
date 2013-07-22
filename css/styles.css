@@ -202,11 +202,11 @@ body #interna a:hover {
   color: #001b1b;
 }
 body .link-contacto {
-  background: url("../imagenes/contacto.png") no-repeat;
+  background: url("../imagenes/contacto.png") no-repeat top center;
   display: block;
   height: 81px;
   line-height: 81px;
-  width: 236px;
+  width: 180px;
   text-align: center;
   font-size: 1.3em;
   font-family: "Futura";
@@ -334,7 +334,7 @@ nav > ul > li:hover ul, nav > ul > li.active ul {
 #botones-slider a.slidesjs-previous {
   background-position: top left;
   left: 830px;
-  top: -116px;
+  top: -86px;
 }
 #botones-slider a.slidesjs-previous:hover {
   background-position: bottom left;
@@ -342,7 +342,7 @@ nav > ul > li:hover ul, nav > ul > li.active ul {
 #botones-slider a.slidesjs-next {
   background-position: top right;
   left: 880px;
-  top: -116px;
+  top: -86px;
 }
 #botones-slider a.slidesjs-next:hover {
   background-position: bottom right;
@@ -352,11 +352,11 @@ nav > ul > li:hover ul, nav > ul > li.active ul {
 #interna, #home-01 {
   *zoom: 1;
   background: url("../imagenes/bg-seccion.png") no-repeat top center;
-  padding-top: 200px;
+  padding-top: 170px;
   position: relative;
   margin-top: -200px;
   z-index: 1800;
-  min-height: 500px;
+  min-height: 450px;
 }
 #interna:before, #interna:after, #home-01:before, #home-01:after {
   content: " ";
@@ -376,14 +376,15 @@ nav > ul > li:hover ul, nav > ul > li.active ul {
 #home-03 {
   background: url("../imagenes/bg-02.png");
   z-index: 1820;
-  margin-top: -200px;
+  margin-top: -250px;
   text-align: right;
 }
 
 #home-04 {
   background: url("../imagenes/bg-03.png");
   z-index: 1830;
-  margin-top: -200px;
+  margin-top: -250px;
+  height: 600px;
 }
 
 #home-02, #home-03, #home-04 {
@@ -401,8 +402,13 @@ nav > ul > li:hover ul, nav > ul > li.active ul {
 #home-02:after, #home-03:after, #home-04:after {
   clear: both;
 }
+#home-02 .link-contacto, #home-03 .link-contacto, #home-04 .link-contacto {
+  position: absolute;
+  top: -20px;
+  right: -80px;
+}
 #home-02 h2, #home-03 h2, #home-04 h2 {
-  font-size: 3em;
+  font-size: 2.5em;
 }
 #home-02 article, #home-03 article, #home-04 article {
   padding-bottom: 180px;
@@ -414,6 +420,26 @@ nav > ul > li:hover ul, nav > ul > li.active ul {
 }
 #home-02 article:after, #home-03 article:after, #home-04 article:after {
   clear: both;
+}
+
+#home-03 .link-contacto {
+  position: absolute;
+  top: -20px;
+  left: -80px;
+}
+
+#home-02 .home-texto {
+  width: 380px;
+  float: left;
+}
+
+#home-03 .home-texto, #home-04 .home-texto {
+  width: 330px;
+  float: left;
+}
+
+#home-04 article {
+  padding-bottom: 50px;
 }
 
 .g-implementaciones, .g-umoviles, .e-implementaciones, .e-umoviles {
@@ -460,7 +486,7 @@ nav > ul > li:hover ul, nav > ul > li.active ul {
 }
 #tabs > ul li a {
   background: #01bfb9;
-  font-size: 14px;
+  font-size: 13px;
   display: table-cell;
   height: 40px;
   width: 145px;
@@ -536,7 +562,7 @@ nav > ul > li:hover ul, nav > ul > li.active ul {
 .form label.check {
   padding-left: 100px;
   padding-right: 10px;
-  text-align: right;
+  text-align: left;
 }
 .form label.check input {
   width: auto;
@@ -637,15 +663,15 @@ nav > ul > li:hover ul, nav > ul > li.active ul {
 /* FOOTER ---- */
 footer {
   background: url("../imagenes/bg-footer.png") no-repeat top center;
-  height: 250px;
-  padding-top: 180px;
+  height: 180px;
+  padding-top: 160px;
   text-align: right;
   z-index: 1990;
   position: relative;
-  margin-top: -200px;
+  margin-top: -180px;
 }
 footer p {
-  padding-bottom: 0.3em;
+  padding-bottom: 1em;
 }
 
 /* CLASES UTILES ---- */

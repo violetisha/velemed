@@ -67,11 +67,11 @@ body
 		a:hover
 			color: darken($primario, 20)
 	.link-contacto
-		background: url("#{$img}contacto.png") no-repeat
+		background: url("#{$img}contacto.png") no-repeat top center
 		display: block
 		height: 81px
 		line-height: 81px
-		width: 236px
+		width: 180px
 		text-align: center
 		font-size: 1.3em
 		font-family: "Futura"
@@ -188,14 +188,14 @@ nav
 		&.slidesjs-previous 
 			background-position: top left
 			left: 830px
-			top: -116px
+			top: -86px
 			&:hover
 				background-position: bottom left
 
 		&.slidesjs-next 
 			background-position: top right
 			left: 880px
-			top: -116px
+			top: -86px
 			&:hover
 				background-position: bottom right
 
@@ -203,11 +203,11 @@ nav
 #interna, #home-01
 	@include clearfix
 	background: url("#{$img}bg-seccion.png") no-repeat top center
-	padding-top: 200px
+	padding-top: 170px
 	position: relative
 	margin-top: -200px
 	z-index: 1800
-	min-height: 500px
+	min-height: 450px
 
 /* HOME ---- */
 #home-02 
@@ -217,12 +217,13 @@ nav
 #home-03 
 	background: url("#{$img}bg-02.png")
 	z-index: 1820
-	margin-top: -200px
+	margin-top: -250px
 	text-align: right
 #home-04 
 	background: url("#{$img}bg-03.png")
 	z-index: 1830
-	margin-top: -200px
+	margin-top: -250px
+	height: 600px
 
 #home-02, #home-03, #home-04 
 	background-repeat: no-repeat
@@ -231,13 +232,35 @@ nav
 	min-height: 500px
 	position: relative
 	@include clearfix
-	
+
+	.link-contacto
+		position: absolute
+		top: -20px
+		right: -80px
 	h2 
-		font-size: 3em
+		font-size: 2.5em
 
 	article
 		padding-bottom: 180px
 		@include clearfix
+#home-03
+	.link-contacto
+		position: absolute
+		top: -20px
+		left: -80px
+
+#home-02
+	.home-texto
+		width: 380px
+		float: left
+
+#home-03, #home-04
+	.home-texto
+		width: 330px
+		float: left
+#home-04
+	article
+		padding-bottom: 50px
 
 .g-implementaciones, .g-umoviles, .e-implementaciones, .e-umoviles
 	display: block
@@ -275,7 +298,7 @@ nav
 			margin-right: 5px
 			a
 				background: $terciario
-				font-size: 14px
+				font-size: 13px
 				display: table-cell
 				height: 40px
 				width: 145px
@@ -320,7 +343,7 @@ nav
 		&.check
 			padding-left: 100px
 			padding-right: 10px
-			text-align: right
+			text-align: left
 			input
 				width: auto
 				padding: 0px
@@ -393,15 +416,15 @@ nav
 /* FOOTER ---- */
 footer
 	background: url("#{$img}bg-footer.png") no-repeat top center
-	height: 250px
-	padding-top: 180px
+	height: 180px
+	padding-top: 160px
 	text-align: right
 	z-index: 1990
 	position: relative
-	margin-top: -200px
+	margin-top: -180px
 
 	p
-		padding-bottom: .3em
+		padding-bottom: 1em
 
 /* CLASES UTILES ---- */
 .container
